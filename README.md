@@ -28,7 +28,7 @@ The application has been optimized to handle Gemini API rate limits. It utilizes
 
 - **Clone the repository:**
    ```bash
--   git clone <your-repository-url>
+-   git clone <https://github.com/Huskyel/Financial-Intelligence-Dashboard.git>
 - **Install the required dependencies:**
 - pip install -r requirements.txt
 - **Configure your API key in the .streamlit/secrets.toml file:**
