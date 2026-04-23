@@ -1,24 +1,37 @@
 # Smart Financial Intelligence Dashboard
 
-Interaktywna aplikacja do analizy i prognozowania płynności finansowej (Cash-Flow) z wykorzystaniem zaawansowanych modeli ekonometrycznych oraz symulacji stochastycznych. Projekt łączy wiedzę z zakresu **Informatyki** (Python, Streamlit) oraz **Ekonometrii** (Modele szeregów czasowych, Monte Carlo).
+An interactive application for analyzing and forecasting financial liquidity (Cash-Flow) using advanced econometric models and stochastic simulations. This project integrates **Computer Science** (Python, Streamlit) and **Econometrics** (Time-series modeling, Monte Carlo methods).
 
-## Kluczowe Funkcjonalności
+## Key Features
 
-- **Prognozowanie szeregów czasowych:** Wykorzystanie modelu wygładzania wykładniczego **Holt-Winters** do predykcji przychodów z uwzględnieniem sezonowości.
-- **Symulacja Monte Carlo:** Generowanie 50 alternatywnych scenariuszy rynkowych w celu oceny ryzyka finansowego (metoda stochastyczna).
-- **Analiza Runway & Burn Rate:** Automatyczne wyliczanie wskaźników płynności i czasu bezpiecznego funkcjonowania firmy.
-- **Dynamiczne Raportowanie PDF:** Możliwość wygenerowania profesjonalnego raportu biznesowego z wykresami jednym kliknięciem.
-- **Interaktywna Wizualizacja:** Dashboard zbudowany w bibliotece Plotly (Dark Mode support).
+- **Time-Series Forecasting:** Utilizes the **Holt-Winters Exponential Smoothing** model to predict revenue while accounting for seasonality.
+- **Monte Carlo Simulation:** Generates alternative market scenarios (200 simulations) to assess financial risk using stochastic methods.
+- **Runway & Burn Rate Analysis:** Automatically calculates liquidity ratios and the estimated survival period for the business.
+- **Dynamic PDF Reporting:** Generate professional business reports including integrated charts with a single click.
+- **Interactive Visualization:** A comprehensive dashboard built with the Plotly library, featuring full Dark Mode support.
+- **AI-Powered Insights:** Integrated with the Gemini 2.0 Flash model to generate concise CFO-style executive summaries for the board.
 
-## Technologie
+## Technologies
 
-- **Język:** Python 3.9+
+- **Language:** Python 3.9+
 - **Frontend/App Framework:** Streamlit
-- **Analiza Danych:** Pandas, NumPy
-- **Modele Statystyczne:** Statsmodels
-- **Wizualizacja:** Plotly
-- **Raportowanie:** FPDF, Kaleido (eksport obrazów)
+- **Data Analysis:** Pandas, NumPy
+- **Statistical Models:** Statsmodels (Holt-Winters, Seasonal Decompose)
+- **Visualization:** Plotly
+- **Reporting:** FPDF, Kaleido
 
-## 📋 Instrukcja Uruchomienia
+## Optimization & Stability
 
-1. Sklonuj repozytorium:
+The application has been optimized to handle Gemini API rate limits. It utilizes a `st.session_state` mechanism and a manual trigger button for AI analysis, preventing **429 Too Many Requests** errors during dynamic "What-If" simulation adjustments.
+
+## Installation & Setup
+
+- **Clone the repository:**
+   ```bash
+-   git clone <your-repository-url>
+- **Install the required dependencies:**
+- pip install -r requirements.txt
+- **Configure your API key in the .streamlit/secrets.toml file:**
+- GEMINI_API_KEY = "YOUR_API_KEY_HERE"
+- **Run the application:**
+- streamlit run app.py
